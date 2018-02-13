@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Container, Grid } from 'semantic-ui-react';
+import { Menu, Container, Grid, Dropdown } from 'semantic-ui-react';
 import { Route, NavLink, HashRouter } from 'react-router-dom';
 
 export class Sidebar extends Component {
@@ -11,7 +11,7 @@ export class Sidebar extends Component {
     const { activeItem } = this.state;
 
     return (
-      <Menu pointing vertical>
+      <Menu pointing vertical size="massive">
         <NavLink to="/biography">
           <Menu.Item
             name="biography"

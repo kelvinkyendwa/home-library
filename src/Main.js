@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Container, Grid } from 'semantic-ui-react';
+import { Menu, Container, Grid, Header } from 'semantic-ui-react';
 import { Navbar } from './Layout/Navbar';
 import { Sidebar } from './Layout/Sidebar';
 import { Route, NavLink, HashRouter } from 'react-router-dom';
@@ -20,15 +20,14 @@ export default class Main extends Component {
     return (
       <HashRouter>
         <div>
-          <h1>Home Library</h1>
           <Navbar />
           <br />
           <Grid divided="vertically">
-            <Grid.Row columns="equal" divided inverted padded>
-              <Grid.Column width={3}>
+            <Grid.Row stretched columns="equal">
+              <Grid.Column width={5} padded>
                 <Sidebar />
               </Grid.Column>
-              <Grid.Column width={13} color="black">
+              <Grid.Column width={10} color="black">
                 <div className="content bxd container">
                   <Container>
                     <Route exact path="/" component={Home} />
