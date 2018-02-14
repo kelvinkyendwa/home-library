@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Menu, Container, Grid, Header } from 'semantic-ui-react';
-import { Route, NavLink, HashRouter } from 'react-router-dom';
+import { Container } from 'semantic-ui-react';
+import { Route, HashRouter } from 'react-router-dom';
 import { Navbar } from './Layout/Navbar';
 import Home from './Content/Home';
 import Movies from './Content/Movies';
@@ -8,13 +8,7 @@ import Music from './Content/Music';
 import './css/index.css';
 
 export default class Main extends Component {
-  state = { activeItem: 'home' };
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
-
   render() {
-    const { activeItem } = this.state;
-
     return (
       <HashRouter>
         <div>
