@@ -20,7 +20,7 @@ export class Navbar extends Component {
     return (
       <div>
         <Segment inverted>
-          <Menu inverted pointing secondary position="right" size="massive">
+          <Menu inverted pointing secondary position="right" size="large">
             <NavLink to="/">
               <Menu.Item
                 name="home"
@@ -28,17 +28,17 @@ export class Navbar extends Component {
                 onClick={this.handleItemClick}
               />
             </NavLink>
-            <NavLink to="/stuff">
+            <NavLink to="/movies">
               <Menu.Item
-                name="stuff"
-                active={activeItem === 'stuff'}
+                name="movies"
+                active={activeItem === 'movies'}
                 onClick={this.handleItemClick}
               />
             </NavLink>
-            <NavLink to="/contact">
+            <NavLink to="/music">
               <Menu.Item
-                name="contact"
-                active={activeItem === 'contact'}
+                name="music"
+                active={activeItem === 'music'}
                 onClick={this.handleItemClick}
               />
             </NavLink>
