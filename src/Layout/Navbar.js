@@ -6,14 +6,21 @@ export class Navbar extends Component {
   state = { activeItem: 'home' };
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
-
+  handleClick = () => {
+    alert('handled ');
+  };
   render() {
     const { activeItem } = this.state;
 
     return (
       <div>
-        <Segment inverted>
-          <Menu inverted pointing secondary position="right" size="large">
+        <Segment inverted style={{ borderRadius: 0 }}>
+          <Menu
+            inverted
+            position="right"
+            size="mini"
+            style={{ textTransform: 'uppercase' }}
+          >
             <NavLink to="/">
               <Menu.Item
                 name="home"
@@ -37,13 +44,15 @@ export class Navbar extends Component {
             </NavLink>
 
             <Menu.Menu position="right">
+              <NavLink to="/login">
+                <Menu.Item>
+                  <Button inverted color="teal">
+                    Login
+                  </Button>
+                </Menu.Item>
+              </NavLink>
               <Menu.Item>
-                <Button inverted color="teal">
-                  Login
-                </Button>
-              </Menu.Item>
-              <Menu.Item>
-                <Button inverted color="blue">
+                <Button inverted color="blue" onClick={this.handleClick}>
                   Sign Up
                 </Button>
               </Menu.Item>
